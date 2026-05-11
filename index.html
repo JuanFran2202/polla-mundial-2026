@@ -3,102 +3,94 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<meta name="theme-color" content="#c9a84c"/>
+<meta name="theme-color" content="#C8102E"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-title" content="Polla 2026"/>
 <title>Polla Mundialista 2026 ⚽</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
 :root{
+  --red:#C8102E;
+  --blue:#003DA5;
+  --green:#007A33;
   --gold:#c9a84c;
-  --gold2:#f0cc6e;
-  --dark:#0a0a0a;
-  --dark2:#111111;
-  --dark3:#1a1a1a;
-  --gray:#2a2a2a;
-  --text:#f5f0e8;
-  --muted:#7a7060;
-  --usa:#B22234;
-  --mex:#006847;
-  --can:#FF0000;
-  --green:#2d7a3a;
+  --white:#ffffff;
+  --offwhite:#f5f7fa;
+  --light:#eef1f6;
+  --border:#dde2ea;
+  --text:#1a1a2e;
+  --muted:#6b7280;
+  --dark:#111827;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--dark);font-family:'Barlow',sans-serif;color:var(--text);min-height:100vh;overflow-x:hidden;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+body{background:var(--offwhite);font-family:'Barlow',sans-serif;color:var(--text);min-height:100vh;overflow-x:hidden;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 @keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
-@keyframes spin{to{transform:rotate(360deg)}}
-.screen{max-width:700px;margin:0 auto;padding:20px 16px 100px;animation:fadeUp .35s ease;}
-/* ── CARDS ── */
-.card{background:var(--dark2);border:1px solid rgba(201,168,76,.15);border-radius:16px;}
-.card-gold{background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.04));border:1px solid rgba(201,168,76,.3);border-radius:16px;}
-/* ── INPUTS ── */
-.inp{width:100%;background:rgba(255,255,255,.05);border:1.5px solid rgba(201,168,76,.2);border-radius:10px;color:var(--text);padding:12px 14px;font-size:16px;font-family:'Barlow',sans-serif;outline:none;transition:border .2s;}
-.inp:focus{border-color:var(--gold);}
-.lbl{display:block;font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-bottom:5px;font-family:'Barlow Condensed',sans-serif;font-weight:600;text-transform:uppercase;}
-/* ── BUTTONS ── */
-.btn{cursor:pointer;border:none;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1.5px;transition:all .18s;text-transform:uppercase;}
-.btn:hover{transform:translateY(-2px);}
-.btn-gold{background:linear-gradient(135deg,#c9a84c,#f0cc6e,#c9a84c);color:#0a0a0a;padding:14px 28px;font-size:18px;width:100%;background-size:200% auto;animation:shimmer 3s linear infinite;}
-.btn-ghost{background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);color:#9a9080;padding:9px 18px;font-size:13px;}
-.btn-outline{background:transparent;border:1.5px solid rgba(201,168,76,.4);color:var(--gold);padding:12px 20px;font-size:15px;width:100%;}
-.btn-red{background:rgba(220,80,20,.08);border:1.5px solid rgba(220,80,20,.25);color:#e07040;padding:13px;font-size:15px;width:100%;}
-.btn-blue{background:rgba(40,100,220,.08);border:1.5px solid rgba(40,100,220,.22);color:#6090e0;padding:12px 20px;font-size:15px;width:100%;}
-/* ── SCORE INPUT ── */
-.score-inp{width:46px;text-align:center;background:rgba(201,168,76,.08);border:1.5px solid rgba(201,168,76,.25);border-radius:8px;color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;padding:5px 2px;outline:none;}
+.screen{max-width:700px;margin:0 auto;padding:20px 16px 100px;animation:fadeUp .3s ease;}
+/* CARDS */
+.card{background:var(--white);border:1px solid var(--border);border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.card-red{background:linear-gradient(135deg,rgba(200,16,46,.07),rgba(200,16,46,.02));border:1px solid rgba(200,16,46,.2);border-radius:14px;}
+.card-blue{background:linear-gradient(135deg,rgba(0,61,165,.07),rgba(0,61,165,.02));border:1px solid rgba(0,61,165,.2);border-radius:14px;}
+.card-green{background:linear-gradient(135deg,rgba(0,122,51,.07),rgba(0,122,51,.02));border:1px solid rgba(0,122,51,.2);border-radius:14px;}
+/* INPUTS */
+.inp{width:100%;background:var(--offwhite);border:1.5px solid var(--border);border-radius:10px;color:var(--text);padding:12px 14px;font-size:16px;font-family:'Barlow',sans-serif;outline:none;transition:border .2s;}
+.inp:focus{border-color:var(--blue);background:var(--white);}
+.lbl{display:block;font-size:10px;letter-spacing:2px;color:var(--muted);margin-bottom:5px;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;}
+/* BUTTONS */
+.btn{cursor:pointer;border:none;border-radius:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;transition:all .18s;}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05);}
+.btn-red{background:var(--red);color:#fff;padding:14px 28px;font-size:18px;width:100%;box-shadow:0 4px 14px rgba(200,16,46,.3);}
+.btn-blue{background:var(--blue);color:#fff;padding:12px 20px;font-size:15px;width:100%;box-shadow:0 4px 14px rgba(0,61,165,.2);}
+.btn-green{background:var(--green);color:#fff;padding:12px 20px;font-size:15px;width:100%;box-shadow:0 4px 14px rgba(0,122,51,.2);}
+.btn-ghost{background:var(--light);border:1.5px solid var(--border);color:var(--muted);padding:9px 18px;font-size:13px;}
+.btn-outline-red{background:transparent;border:1.5px solid var(--red);color:var(--red);padding:12px 20px;font-size:15px;width:100%;}
+/* SCORE */
+.score-inp{width:44px;text-align:center;background:var(--light);border:1.5px solid var(--border);border-radius:7px;color:var(--blue);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:21px;padding:5px 2px;outline:none;transition:border .2s;}
+.score-inp:focus{border-color:var(--blue);}
 input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
-/* ── MATCH ROW ── */
-.match-row{display:flex;align-items:center;gap:6px;padding:9px 12px;border-radius:10px;margin-bottom:5px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);transition:all .15s;}
-.match-row.win{background:rgba(50,180,80,.07);border-color:rgba(50,180,80,.2);}
-.match-row.lose{background:rgba(180,50,50,.04);}
-/* ── TABS ── */
+/* MATCH ROW */
+.match-row{display:flex;align-items:center;gap:6px;padding:9px 11px;border-radius:10px;margin-bottom:5px;background:var(--offwhite);border:1px solid var(--border);}
+.match-row.win{background:rgba(0,122,51,.07);border-color:rgba(0,122,51,.25);}
+.match-row.lose{background:rgba(200,16,46,.04);border-color:rgba(200,16,46,.12);}
+/* TABS */
 .phase-tabs{display:flex;gap:5px;overflow-x:auto;padding-bottom:6px;margin-bottom:14px;scrollbar-width:none;}
-.tab{cursor:pointer;border:none;border-radius:8px;white-space:nowrap;padding:7px 12px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;transition:all .18s;flex-shrink:0;}
-.tab.active{background:rgba(201,168,76,.18);color:var(--gold);border-bottom:2px solid var(--gold);}
-.tab.inactive{background:rgba(255,255,255,.04);color:#5a5040;border-bottom:2px solid transparent;}
-/* ── LEAGUE CARD ── */
-.league-card{background:var(--dark2);border:1px solid rgba(201,168,76,.15);border-radius:14px;padding:16px 18px;margin-bottom:10px;cursor:pointer;transition:all .2s;border-left:3px solid rgba(201,168,76,.3);}
-.league-card:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.4);}
-/* ── RANK ROW ── */
+.tab{cursor:pointer;border:none;border-radius:8px;white-space:nowrap;padding:7px 12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;transition:all .18s;flex-shrink:0;}
+.tab.active{background:var(--blue);color:#fff;box-shadow:0 2px 8px rgba(0,61,165,.25);}
+.tab.inactive{background:var(--light);color:var(--muted);border:1px solid var(--border);}
+/* LEAGUE CARD */
+.league-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:10px;cursor:pointer;transition:all .2s;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.league-card:hover{box-shadow:0 4px 16px rgba(0,61,165,.12);border-color:rgba(0,61,165,.3);transform:translateY(-1px);}
+/* RANK ROW */
 .rank-row{display:flex;align-items:center;gap:12px;padding:13px 16px;border-radius:13px;margin-bottom:7px;}
-/* ── MISC ── */
+/* MISC */
 .hidden{display:none!important;}
-.toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;color:#fff;padding:11px 26px;border-radius:40px;font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;box-shadow:0 6px 28px rgba(0,0,0,.6);animation:fadeUp .25s ease;white-space:nowrap;}
-.header{position:sticky;top:0;z-index:100;background:rgba(10,10,10,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,.1);padding:11px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;color:#fff;padding:11px 26px;border-radius:40px;font-family:'Barlow',sans-serif;font-size:15px;font-weight:500;box-shadow:0 6px 28px rgba(0,0,0,.2);animation:fadeUp .25s ease;white-space:nowrap;}
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:11px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px;box-shadow:0 1px 6px rgba(0,0,0,.06);}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
 .stat-box{padding:14px 10px;text-align:center;}
-/* ── WE ARE 26 LOGO ── */
-.logo-26{display:inline-flex;align-items:baseline;gap:2px;line-height:1;}
-.logo-2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:inherit;color:var(--gold);}
-.logo-6{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:inherit;color:var(--text);}
-/* ── TROPHY SVG ── */
-.trophy-glow{filter:drop-shadow(0 0 20px rgba(201,168,76,.4));}
-/* ── MASCOT STRIP ── */
-.mascot-strip{display:flex;justify-content:center;gap:24px;padding:16px 0;font-size:13px;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-weight:600;letter-spacing:1px;}
-.mascot{text-align:center;}
-.mascot-emoji{font-size:36px;display:block;margin-bottom:4px;}
-/* ── HOST COLORS ── */
-.host-usa{color:#e84040;}
-.host-mex{color:#40c06a;}
-.host-can{color:#e84040;}
-/* ── DIVIDER ── */
-.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.2),transparent);margin:16px 0;}
-select option{background:#111;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:16px 0;}
+/* TRICOLOR BAR */
+.tribar{height:4px;background:linear-gradient(90deg,var(--red) 33.3%,var(--blue) 33.3% 66.6%,var(--green) 66.6%);border-radius:2px;}
+/* SECTION TITLE */
+.sec-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+select option{background:var(--white);}
 ::-webkit-scrollbar{width:3px;height:3px;}
-::-webkit-scrollbar-thumb{background:rgba(201,168,76,.2);border-radius:2px;}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+/* MATCH DATE BADGE */
+.date-badge{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:1px;background:var(--light);border:1px solid var(--border);border-radius:6px;padding:2px 6px;color:var(--muted);white-space:nowrap;flex-shrink:0;}
+.ecu-badge{background:rgba(200,16,46,.1);border-color:rgba(200,16,46,.2);color:var(--red);}
 </style>
 </head>
 <body>
 
-<!-- BG texture -->
+<!-- TOP TRICOLOR BAR -->
+<div class="tribar"></div>
+
+<!-- BG subtle -->
 <div style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;">
-  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#B22234,#006847,#B22234,#006847,#FF0000);opacity:.6;"></div>
-  <div style="position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(ellipse,rgba(201,168,76,.04) 0%,transparent 60%);border-radius:50%;"></div>
-  <!-- Pattern "26" watermark -->
-  <svg style="position:absolute;bottom:0;right:0;opacity:.03;width:400px;height:400px" viewBox="0 0 200 200">
-    <text x="10" y="160" font-family="sans-serif" font-weight="900" font-size="180" fill="white">26</text>
+  <svg style="position:absolute;bottom:0;right:0;opacity:.03;width:320px;height:320px" viewBox="0 0 200 200">
+    <text x="5" y="170" font-family="sans-serif" font-weight="900" font-size="180" fill="#003DA5">26</text>
   </svg>
 </div>
 
@@ -106,7 +98,7 @@ select option{background:#111;}
 
 <!-- HEADER -->
 <div id="header" class="header hidden">
-  <button onclick="App.goLeagues()" style="background:none;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;">
+  <button onclick="App.goLeagues()" style="background:none;border:none;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;letter-spacing:2px;color:var(--red);text-transform:uppercase;">
     ⚽ WE ARE 26
   </button>
   <div style="display:flex;gap:8px;align-items:center;">
@@ -119,24 +111,180 @@ select option{background:#111;}
 
 <script>
 // ═══════════════════════════════════════
-// DATA
+// GRUPOS OFICIALES — sorteo dic 2025
 // ═══════════════════════════════════════
-const GROUPS={A:["Argentina","Ecuador","Canadá","Nigeria"],B:["España","Croacia","Marruecos","Eslovaquia"],C:["Francia","Brasil","Japón","Serbia"],D:["Inglaterra","Senegal","Irán","Eslovenia"],E:["Portugal","Colombia","Austria","Egipto"],F:["Alemania","México","Suiza","Camerún"],G:["Holanda","Uruguay","Corea del Sur","Ghana"],H:["Bélgica","Italia","Polonia","Costa Rica"],I:["EEUU","Panamá","Venezuela","Nueva Zelanda"],J:["Chile","Perú","Bolivia","Jamaica"],K:["Australia","Dinamarca","Argelia","Georgia"],L:["Turquía","Ucrania","Túnez","Honduras"]};
-const FLAG={"Argentina":"🇦🇷","Brasil":"🇧🇷","Francia":"🇫🇷","España":"🇪🇸","Inglaterra":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Portugal":"🇵🇹","Alemania":"🇩🇪","Bélgica":"🇧🇪","Holanda":"🇳🇱","Italia":"🇮🇹","Uruguay":"🇺🇾","Colombia":"🇨🇴","México":"🇲🇽","EEUU":"🇺🇸","Japón":"🇯🇵","Corea del Sur":"🇰🇷","Marruecos":"🇲🇦","Senegal":"🇸🇳","Ghana":"🇬🇭","Nigeria":"🇳🇬","Croacia":"🇭🇷","Dinamarca":"🇩🇰","Suiza":"🇨🇭","Serbia":"🇷🇸","Polonia":"🇵🇱","Turquía":"🇹🇷","Ucrania":"🇺🇦","Ecuador":"🇪🇨","Chile":"🇨🇱","Perú":"🇵🇪","Venezuela":"🇻🇪","Bolivia":"🇧🇴","Paraguay":"🇵🇾","Panamá":"🇵🇦","Costa Rica":"🇨🇷","Honduras":"🇭🇳","Jamaica":"🇯🇲","Canadá":"🇨🇦","Arabia Saudita":"🇸🇦","Australia":"🇦🇺","Irán":"🇮🇷","Egipto":"🇪🇬","Argelia":"🇩🇿","Camerún":"🇨🇲","Túnez":"🇹🇳","Eslovaquia":"🇸🇰","Eslovenia":"🇸🇮","Austria":"🇦🇹","Georgia":"🇬🇪","Nueva Zelanda":"🇳🇿"};
+const GROUPS={
+  A:["México","Sudáfrica","Corea del Sur","República Checa"],
+  B:["Canadá","Bosnia y Herz.","Qatar","Suiza"],
+  C:["Brasil","Marruecos","Haití","Escocia"],
+  D:["Estados Unidos","Paraguay","Australia","Turquía"],
+  E:["Alemania","Curazao","Costa de Marfil","Ecuador"],
+  F:["Países Bajos","Japón","Túnez","Suecia"],
+  G:["Bélgica","Egipto","Irán","Nueva Zelanda"],
+  H:["España","Cabo Verde","Arabia Saudita","Uruguay"],
+  I:["Francia","Senegal","Noruega","Irak"],
+  J:["Argentina","Argelia","Austria","Jordania"],
+  K:["Portugal","Uzbekistán","Colombia","R.D. Congo"],
+  L:["Inglaterra","Croacia","Ghana","Panamá"]
+};
+
+const FLAG={
+  "México":"🇲🇽","Sudáfrica":"🇿🇦","Corea del Sur":"🇰🇷","República Checa":"🇨🇿",
+  "Canadá":"🇨🇦","Bosnia y Herz.":"🇧🇦","Qatar":"🇶🇦","Suiza":"🇨🇭",
+  "Brasil":"🇧🇷","Marruecos":"🇲🇦","Haití":"🇭🇹","Escocia":"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  "Estados Unidos":"🇺🇸","Paraguay":"🇵🇾","Australia":"🇦🇺","Turquía":"🇹🇷",
+  "Alemania":"🇩🇪","Curazao":"🇨🇼","Costa de Marfil":"🇨🇮","Ecuador":"🇪🇨",
+  "Países Bajos":"🇳🇱","Japón":"🇯🇵","Túnez":"🇹🇳","Suecia":"🇸🇪",
+  "Bélgica":"🇧🇪","Egipto":"🇪🇬","Irán":"🇮🇷","Nueva Zelanda":"🇳🇿",
+  "España":"🇪🇸","Cabo Verde":"🇨🇻","Arabia Saudita":"🇸🇦","Uruguay":"🇺🇾",
+  "Francia":"🇫🇷","Senegal":"🇸🇳","Noruega":"🇳🇴","Irak":"🇮🇶",
+  "Argentina":"🇦🇷","Argelia":"🇩🇿","Austria":"🇦🇹","Jordania":"🇯🇴",
+  "Portugal":"🇵🇹","Uzbekistán":"🇺🇿","Colombia":"🇨🇴","R.D. Congo":"🇨🇩",
+  "Inglaterra":"🏴󠁧󠁢󠁥󠁮󠁧󠁿","Croacia":"🇭🇷","Ghana":"🇬🇭","Panamá":"🇵🇦"
+};
 const fl=t=>FLAG[t]||"🏳️";
-let _mid=1;
-const GROUP_MATCHES=[];
-Object.entries(GROUPS).forEach(([g,t])=>{for(let i=0;i<t.length;i++)for(let j=i+1;j<t.length;j++)GROUP_MATCHES.push({id:_mid++,phase:"Grupos",group:g,home:t[i],away:t[j]});});
-const KO_MATCHES=[...Array.from({length:16},(_,i)=>({id:_mid++,phase:"Octavos",label:`Octavos ${i+1}`,home:`Clasif. ${2*i+1}`,away:`Clasif. ${2*i+2}`})),...Array.from({length:8},(_,i)=>({id:_mid++,phase:"Cuartos",label:`Cuartos ${i+1}`,home:`Gan. O${2*i+1}`,away:`Gan. O${2*i+2}`})),...Array.from({length:4},(_,i)=>({id:_mid++,phase:"Semifinal",label:`Semifinal ${i+1}`,home:`Gan. C${2*i+1}`,away:`Gan. C${2*i+2}`})),{id:_mid++,phase:"Tercer Lugar",label:"3er Lugar 🥉",home:"Perd. SF1",away:"Perd. SF2"},{id:_mid++,phase:"Final",label:"⚽ GRAN FINAL",home:"Gan. SF1",away:"Gan. SF2"}];
-const ALL_MATCHES=[...GROUP_MATCHES,...KO_MATCHES];
-const PHASES=["Grupos","Octavos","Cuartos","Semifinal","Tercer Lugar","Final"];
-const BONUS={Grupos:1,Octavos:1.5,Cuartos:2,Semifinal:2.5,"Tercer Lugar":2.5,Final:3};
 const ALL_TEAMS=[...new Set(Object.values(GROUPS).flat())].sort();
+
+// ═══════════════════════════════════════
+// FIXTURE COMPLETO — horarios ECU (UTC-5)
+// Argentina = ECU+2h → ARG-2h = ECU
+// ═══════════════════════════════════════
+// Nota: horarios Argentina en la fuente, restamos 2h para Ecuador (ECU = UTC-5, ARG = UTC-3)
+// Formato: {id, phase, group?, home, away, date, timeECU, venue, city}
+
+let _mid=1;
+const FIXTURE=[
+  // ── GRUPO A ──
+  {id:_mid++,phase:"Grupos",group:"A",home:"México",away:"Sudáfrica",date:"Jue 11 Jun",timeECU:"14:00",venue:"Estadio Azteca",city:"Ciudad de México"},
+  {id:_mid++,phase:"Grupos",group:"A",home:"Corea del Sur",away:"República Checa",date:"Jue 11 Jun",timeECU:"21:00",venue:"Estadio Akron",city:"Guadalajara"},
+  {id:_mid++,phase:"Grupos",group:"A",home:"República Checa",away:"Sudáfrica",date:"Jue 18 Jun",timeECU:"11:00",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  {id:_mid++,phase:"Grupos",group:"A",home:"México",away:"Corea del Sur",date:"Jue 18 Jun",timeECU:"20:00",venue:"Estadio Akron",city:"Guadalajara"},
+  {id:_mid++,phase:"Grupos",group:"A",home:"República Checa",away:"México",date:"Mié 24 Jun",timeECU:"20:00",venue:"Estadio Azteca",city:"Ciudad de México"},
+  {id:_mid++,phase:"Grupos",group:"A",home:"Sudáfrica",away:"Corea del Sur",date:"Mié 24 Jun",timeECU:"20:00",venue:"Estadio BBVA",city:"Monterrey"},
+  // ── GRUPO B ──
+  {id:_mid++,phase:"Grupos",group:"B",home:"Canadá",away:"Bosnia y Herz.",date:"Vie 12 Jun",timeECU:"14:00",venue:"BMO Field",city:"Toronto"},
+  {id:_mid++,phase:"Grupos",group:"B",home:"Qatar",away:"Suiza",date:"Sáb 13 Jun",timeECU:"14:00",venue:"Levi's Stadium",city:"San Francisco"},
+  {id:_mid++,phase:"Grupos",group:"B",home:"Suiza",away:"Bosnia y Herz.",date:"Jue 18 Jun",timeECU:"14:00",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"Grupos",group:"B",home:"Canadá",away:"Qatar",date:"Jue 18 Jun",timeECU:"17:00",venue:"BC Place",city:"Vancouver"},
+  {id:_mid++,phase:"Grupos",group:"B",home:"Suiza",away:"Canadá",date:"Mié 24 Jun",timeECU:"14:00",venue:"BC Place",city:"Vancouver"},
+  {id:_mid++,phase:"Grupos",group:"B",home:"Bosnia y Herz.",away:"Qatar",date:"Mié 24 Jun",timeECU:"14:00",venue:"Lumen Field",city:"Seattle"},
+  // ── GRUPO C ──
+  {id:_mid++,phase:"Grupos",group:"C",home:"Brasil",away:"Marruecos",date:"Sáb 13 Jun",timeECU:"17:00",venue:"MetLife Stadium",city:"Nueva Jersey"},
+  {id:_mid++,phase:"Grupos",group:"C",home:"Haití",away:"Escocia",date:"Sáb 13 Jun",timeECU:"20:00",venue:"Gillette Stadium",city:"Boston"},
+  {id:_mid++,phase:"Grupos",group:"C",home:"Escocia",away:"Marruecos",date:"Vie 19 Jun",timeECU:"17:00",venue:"Gillette Stadium",city:"Boston"},
+  {id:_mid++,phase:"Grupos",group:"C",home:"Brasil",away:"Haití",date:"Vie 19 Jun",timeECU:"20:00",venue:"Lincoln Financial Field",city:"Filadelfia"},
+  {id:_mid++,phase:"Grupos",group:"C",home:"Escocia",away:"Brasil",date:"Mié 24 Jun",timeECU:"17:00",venue:"Hard Rock Stadium",city:"Miami"},
+  {id:_mid++,phase:"Grupos",group:"C",home:"Marruecos",away:"Haití",date:"Jue 25 Jun",timeECU:"17:00",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  // ── GRUPO D ──
+  {id:_mid++,phase:"Grupos",group:"D",home:"Estados Unidos",away:"Paraguay",date:"Vie 12 Jun",timeECU:"20:00",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"Grupos",group:"D",home:"Australia",away:"Turquía",date:"Sáb 13 Jun",timeECU:"23:00",venue:"BC Place",city:"Vancouver"},
+  {id:_mid++,phase:"Grupos",group:"D",home:"Turquía",away:"Paraguay",date:"Vie 19 Jun",timeECU:"23:00",venue:"Levi's Stadium",city:"San Francisco"},
+  {id:_mid++,phase:"Grupos",group:"D",home:"Estados Unidos",away:"Australia",date:"Vie 19 Jun",timeECU:"14:00",venue:"Lumen Field",city:"Seattle"},
+  {id:_mid++,phase:"Grupos",group:"D",home:"Turquía",away:"Estados Unidos",date:"Vie 26 Jun",timeECU:"21:00",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"Grupos",group:"D",home:"Paraguay",away:"Australia",date:"Jue 25 Jun",timeECU:"21:00",venue:"Levi's Stadium",city:"San Francisco"},
+  // ── GRUPO E ──
+  {id:_mid++,phase:"Grupos",group:"E",home:"Alemania",away:"Curazao",date:"Dom 14 Jun",timeECU:"12:00",venue:"NRG Stadium",city:"Houston"},
+  {id:_mid++,phase:"Grupos",group:"E",home:"Costa de Marfil",away:"Ecuador",date:"Dom 14 Jun",timeECU:"18:00",venue:"Lincoln Financial Field",city:"Filadelfia"},
+  {id:_mid++,phase:"Grupos",group:"E",home:"Alemania",away:"Costa de Marfil",date:"Sáb 20 Jun",timeECU:"15:00",venue:"BMO Field",city:"Toronto"},
+  {id:_mid++,phase:"Grupos",group:"E",home:"Curazao",away:"Ecuador",date:"Sáb 20 Jun",timeECU:"19:00",venue:"Arrowhead Stadium",city:"Kansas City"},
+  {id:_mid++,phase:"Grupos",group:"E",home:"Ecuador",away:"Alemania",date:"Jue 25 Jun",timeECU:"15:00",venue:"MetLife Stadium",city:"Nueva Jersey"},
+  {id:_mid++,phase:"Grupos",group:"E",home:"Curazao",away:"Costa de Marfil",date:"Jue 25 Jun",timeECU:"15:00",venue:"Lincoln Financial Field",city:"Filadelfia"},
+  // ── GRUPO F ──
+  {id:_mid++,phase:"Grupos",group:"F",home:"Países Bajos",away:"Japón",date:"Dom 14 Jun",timeECU:"15:00",venue:"AT&T Stadium",city:"Dallas"},
+  {id:_mid++,phase:"Grupos",group:"F",home:"Suecia",away:"Túnez",date:"Dom 14 Jun",timeECU:"21:00",venue:"Estadio BBVA",city:"Monterrey"},
+  {id:_mid++,phase:"Grupos",group:"F",home:"Países Bajos",away:"Suecia",date:"Sáb 20 Jun",timeECU:"12:00",venue:"NRG Stadium",city:"Houston"},
+  {id:_mid++,phase:"Grupos",group:"F",home:"Túnez",away:"Japón",date:"Sáb 20 Jun",timeECU:"23:00",venue:"Estadio BBVA",city:"Monterrey"},
+  {id:_mid++,phase:"Grupos",group:"F",home:"Japón",away:"Suecia",date:"Jue 25 Jun",timeECU:"18:00",venue:"AT&T Stadium",city:"Dallas"},
+  {id:_mid++,phase:"Grupos",group:"F",home:"Túnez",away:"Países Bajos",date:"Jue 25 Jun",timeECU:"18:00",venue:"Arrowhead Stadium",city:"Kansas City"},
+  // ── GRUPO G ──
+  {id:_mid++,phase:"Grupos",group:"G",home:"Bélgica",away:"Egipto",date:"Lun 15 Jun",timeECU:"14:00",venue:"Lumen Field",city:"Seattle"},
+  {id:_mid++,phase:"Grupos",group:"G",home:"Irán",away:"Nueva Zelanda",date:"Lun 15 Jun",timeECU:"20:00",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"Grupos",group:"G",home:"Bélgica",away:"Irán",date:"Dom 21 Jun",timeECU:"14:00",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"Grupos",group:"G",home:"Nueva Zelanda",away:"Egipto",date:"Dom 21 Jun",timeECU:"20:00",venue:"BC Place",city:"Vancouver"},
+  {id:_mid++,phase:"Grupos",group:"G",home:"Egipto",away:"Irán",date:"Sáb 27 Jun",timeECU:"22:00",venue:"Lumen Field",city:"Seattle"},
+  {id:_mid++,phase:"Grupos",group:"G",home:"Nueva Zelanda",away:"Bélgica",date:"Sáb 27 Jun",timeECU:"22:00",venue:"BC Place",city:"Vancouver"},
+  // ── GRUPO H ──
+  {id:_mid++,phase:"Grupos",group:"H",home:"España",away:"Cabo Verde",date:"Lun 15 Jun",timeECU:"11:00",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  {id:_mid++,phase:"Grupos",group:"H",home:"Arabia Saudita",away:"Uruguay",date:"Lun 15 Jun",timeECU:"17:00",venue:"Hard Rock Stadium",city:"Miami"},
+  {id:_mid++,phase:"Grupos",group:"H",home:"España",away:"Arabia Saudita",date:"Dom 21 Jun",timeECU:"11:00",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  {id:_mid++,phase:"Grupos",group:"H",home:"Uruguay",away:"Cabo Verde",date:"Dom 21 Jun",timeECU:"17:00",venue:"Hard Rock Stadium",city:"Miami"},
+  {id:_mid++,phase:"Grupos",group:"H",home:"Cabo Verde",away:"Arabia Saudita",date:"Vie 26 Jun",timeECU:"19:00",venue:"NRG Stadium",city:"Houston"},
+  {id:_mid++,phase:"Grupos",group:"H",home:"Uruguay",away:"España",date:"Vie 26 Jun",timeECU:"19:00",venue:"Estadio Akron",city:"Guadalajara"},
+  // ── GRUPO I ──
+  {id:_mid++,phase:"Grupos",group:"I",home:"Francia",away:"Senegal",date:"Mar 16 Jun",timeECU:"14:00",venue:"MetLife Stadium",city:"Nueva Jersey"},
+  {id:_mid++,phase:"Grupos",group:"I",home:"Irak",away:"Noruega",date:"Mar 16 Jun",timeECU:"17:00",venue:"Gillette Stadium",city:"Boston"},
+  {id:_mid++,phase:"Grupos",group:"I",home:"Francia",away:"Irak",date:"Lun 22 Jun",timeECU:"16:00",venue:"Lincoln Financial Field",city:"Filadelfia"},
+  {id:_mid++,phase:"Grupos",group:"I",home:"Noruega",away:"Senegal",date:"Lun 22 Jun",timeECU:"19:00",venue:"MetLife Stadium",city:"Nueva Jersey"},
+  {id:_mid++,phase:"Grupos",group:"I",home:"Noruega",away:"Francia",date:"Vie 26 Jun",timeECU:"14:00",venue:"Gillette Stadium",city:"Boston"},
+  {id:_mid++,phase:"Grupos",group:"I",home:"Senegal",away:"Irak",date:"Vie 26 Jun",timeECU:"14:00",venue:"BMO Field",city:"Toronto"},
+  // ── GRUPO J ──
+  {id:_mid++,phase:"Grupos",group:"J",home:"Argentina",away:"Argelia",date:"Mar 16 Jun",timeECU:"20:00",venue:"Arrowhead Stadium",city:"Kansas City"},
+  {id:_mid++,phase:"Grupos",group:"J",home:"Austria",away:"Jordania",date:"Mié 17 Jun",timeECU:"00:00",venue:"Levi's Stadium",city:"San Francisco"},
+  {id:_mid++,phase:"Grupos",group:"J",home:"Argentina",away:"Austria",date:"Lun 22 Jun",timeECU:"12:00",venue:"AT&T Stadium",city:"Dallas"},
+  {id:_mid++,phase:"Grupos",group:"J",home:"Jordania",away:"Argelia",date:"Mar 23 Jun",timeECU:"23:00",venue:"Levi's Stadium",city:"San Francisco"},
+  {id:_mid++,phase:"Grupos",group:"J",home:"Argelia",away:"Austria",date:"Sáb 27 Jun",timeECU:"21:00",venue:"Arrowhead Stadium",city:"Kansas City"},
+  {id:_mid++,phase:"Grupos",group:"J",home:"Jordania",away:"Argentina",date:"Sáb 27 Jun",timeECU:"21:00",venue:"AT&T Stadium",city:"Dallas"},
+  // ── GRUPO K ──
+  {id:_mid++,phase:"Grupos",group:"K",home:"Portugal",away:"R.D. Congo",date:"Mié 17 Jun",timeECU:"12:00",venue:"NRG Stadium",city:"Houston"},
+  {id:_mid++,phase:"Grupos",group:"K",home:"Uzbekistán",away:"Colombia",date:"Mié 17 Jun",timeECU:"21:00",venue:"Estadio Azteca",city:"Ciudad de México"},
+  {id:_mid++,phase:"Grupos",group:"K",home:"Portugal",away:"Uzbekistán",date:"Mar 23 Jun",timeECU:"12:00",venue:"NRG Stadium",city:"Houston"},
+  {id:_mid++,phase:"Grupos",group:"K",home:"R.D. Congo",away:"Colombia",date:"Mar 23 Jun",timeECU:"21:00",venue:"Estadio Akron",city:"Guadalajara"},
+  {id:_mid++,phase:"Grupos",group:"K",home:"Colombia",away:"Portugal",date:"Sáb 27 Jun",timeECU:"18:30",venue:"Hard Rock Stadium",city:"Miami"},
+  {id:_mid++,phase:"Grupos",group:"K",home:"R.D. Congo",away:"Uzbekistán",date:"Sáb 27 Jun",timeECU:"18:30",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  // ── GRUPO L ──
+  {id:_mid++,phase:"Grupos",group:"L",home:"Inglaterra",away:"Croacia",date:"Mié 17 Jun",timeECU:"15:00",venue:"AT&T Stadium",city:"Dallas"},
+  {id:_mid++,phase:"Grupos",group:"L",home:"Ghana",away:"Panamá",date:"Mié 17 Jun",timeECU:"18:00",venue:"BMO Field",city:"Toronto"},
+  {id:_mid++,phase:"Grupos",group:"L",home:"Inglaterra",away:"Ghana",date:"Mar 23 Jun",timeECU:"15:00",venue:"Gillette Stadium",city:"Boston"},
+  {id:_mid++,phase:"Grupos",group:"L",home:"Panamá",away:"Croacia",date:"Mar 23 Jun",timeECU:"18:00",venue:"BMO Field",city:"Toronto"},
+  {id:_mid++,phase:"Grupos",group:"L",home:"Panamá",away:"Inglaterra",date:"Sáb 27 Jun",timeECU:"16:00",venue:"MetLife Stadium",city:"Nueva Jersey"},
+  {id:_mid++,phase:"Grupos",group:"L",home:"Croacia",away:"Ghana",date:"Sáb 27 Jun",timeECU:"16:00",venue:"Lincoln Financial Field",city:"Filadelfia"},
+  // ── DIECISEISAVOS ──
+  {id:_mid++,phase:"16avos",label:"16avos 1",home:"2º Grupo A",away:"2º Grupo B",date:"Dom 28 Jun",timeECU:"",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"16avos",label:"16avos 2",home:"1º Grupo E",away:"3º C/D/F",date:"Lun 29 Jun",timeECU:"",venue:"Gillette Stadium",city:"Boston"},
+  {id:_mid++,phase:"16avos",label:"16avos 3",home:"1º Grupo F",away:"2º Grupo C",date:"Lun 29 Jun",timeECU:"",venue:"Estadio BBVA",city:"Monterrey"},
+  {id:_mid++,phase:"16avos",label:"16avos 4",home:"1º Grupo C",away:"2º Grupo F",date:"Lun 29 Jun",timeECU:"",venue:"NRG Stadium",city:"Houston"},
+  {id:_mid++,phase:"16avos",label:"16avos 5",home:"1º Grupo I",away:"3º C/D/F/G/H",date:"Mar 30 Jun",timeECU:"",venue:"MetLife Stadium",city:"Nueva Jersey"},
+  {id:_mid++,phase:"16avos",label:"16avos 6",home:"2º Grupo E",away:"2º Grupo I",date:"Mar 30 Jun",timeECU:"",venue:"AT&T Stadium",city:"Dallas"},
+  {id:_mid++,phase:"16avos",label:"16avos 7",home:"1º Grupo A",away:"3º C/E/F/H/I",date:"Mar 30 Jun",timeECU:"",venue:"Estadio Azteca",city:"Ciudad de México"},
+  {id:_mid++,phase:"16avos",label:"16avos 8",home:"1º Grupo L",away:"3º E/H/I/J/K",date:"Mié 1 Jul",timeECU:"",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  {id:_mid++,phase:"16avos",label:"16avos 9",home:"1º Grupo D",away:"3º B/E/F/I/J",date:"Mié 1 Jul",timeECU:"",venue:"Levi's Stadium",city:"San Francisco"},
+  {id:_mid++,phase:"16avos",label:"16avos 10",home:"1º Grupo G",away:"3º A/E/H/I/J",date:"Mié 1 Jul",timeECU:"",venue:"Lumen Field",city:"Seattle"},
+  {id:_mid++,phase:"16avos",label:"16avos 11",home:"2º Grupo K",away:"2º Grupo L",date:"Jue 2 Jul",timeECU:"",venue:"BMO Field",city:"Toronto"},
+  {id:_mid++,phase:"16avos",label:"16avos 12",home:"1º Grupo H",away:"2º Grupo J",date:"Jue 2 Jul",timeECU:"",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"16avos",label:"16avos 13",home:"1º Grupo B",away:"3º E/F/G/I/J",date:"Jue 2 Jul",timeECU:"",venue:"BC Place",city:"Vancouver"},
+  {id:_mid++,phase:"16avos",label:"16avos 14",home:"1º Grupo J",away:"2º Grupo H",date:"Vie 3 Jul",timeECU:"",venue:"Hard Rock Stadium",city:"Miami"},
+  {id:_mid++,phase:"16avos",label:"16avos 15",home:"1º Grupo K",away:"3º D/E/I/J/L",date:"Vie 3 Jul",timeECU:"",venue:"Arrowhead Stadium",city:"Kansas City"},
+  {id:_mid++,phase:"16avos",label:"16avos 16",home:"2º Grupo D",away:"2º Grupo G",date:"Vie 3 Jul",timeECU:"",venue:"AT&T Stadium",city:"Dallas"},
+  // ── OCTAVOS ──
+  {id:_mid++,phase:"Octavos",label:"Octavos 1",home:"Gan. 16avos 2",away:"Gan. 16avos 5",date:"Sáb 4 Jul",timeECU:"",venue:"Lincoln Financial Field",city:"Filadelfia"},
+  {id:_mid++,phase:"Octavos",label:"Octavos 2",home:"Gan. 16avos 1",away:"Gan. 16avos 3",date:"Sáb 4 Jul",timeECU:"",venue:"NRG Stadium",city:"Houston"},
+  {id:_mid++,phase:"Octavos",label:"Octavos 3",home:"Gan. 16avos 4",away:"Gan. 16avos 6",date:"Dom 5 Jul",timeECU:"",venue:"MetLife Stadium",city:"Nueva Jersey"},
+  {id:_mid++,phase:"Octavos",label:"Octavos 4",home:"Gan. 16avos 7",away:"Gan. 16avos 8",date:"Dom 5 Jul",timeECU:"",venue:"Estadio Azteca",city:"Ciudad de México"},
+  {id:_mid++,phase:"Octavos",label:"Octavos 5",home:"Gan. 16avos 11",away:"Gan. 16avos 12",date:"Lun 6 Jul",timeECU:"",venue:"AT&T Stadium",city:"Dallas"},
+  {id:_mid++,phase:"Octavos",label:"Octavos 6",home:"Gan. 16avos 9",away:"Gan. 16avos 10",date:"Lun 6 Jul",timeECU:"",venue:"Lumen Field",city:"Seattle"},
+  {id:_mid++,phase:"Octavos",label:"Octavos 7",home:"Gan. 16avos 14",away:"Gan. 16avos 16",date:"Mar 7 Jul",timeECU:"",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  {id:_mid++,phase:"Octavos",label:"Octavos 8",home:"Gan. 16avos 13",away:"Gan. 16avos 15",date:"Mar 7 Jul",timeECU:"",venue:"BC Place",city:"Vancouver"},
+  // ── CUARTOS ──
+  {id:_mid++,phase:"Cuartos",label:"Cuartos 1",home:"Gan. Oct. 1",away:"Gan. Oct. 2",date:"Jue 9 Jul",timeECU:"",venue:"Gillette Stadium",city:"Boston"},
+  {id:_mid++,phase:"Cuartos",label:"Cuartos 2",home:"Gan. Oct. 5",away:"Gan. Oct. 6",date:"Vie 10 Jul",timeECU:"",venue:"SoFi Stadium",city:"Los Ángeles"},
+  {id:_mid++,phase:"Cuartos",label:"Cuartos 3",home:"Gan. Oct. 3",away:"Gan. Oct. 4",date:"Sáb 11 Jul",timeECU:"",venue:"Hard Rock Stadium",city:"Miami"},
+  {id:_mid++,phase:"Cuartos",label:"Cuartos 4",home:"Gan. Oct. 7",away:"Gan. Oct. 8",date:"Sáb 11 Jul",timeECU:"",venue:"Arrowhead Stadium",city:"Kansas City"},
+  // ── SEMIS ──
+  {id:_mid++,phase:"Semifinal",label:"Semifinal 1",home:"Gan. Ctos. 1",away:"Gan. Ctos. 2",date:"Mar 14 Jul",timeECU:"",venue:"AT&T Stadium",city:"Dallas"},
+  {id:_mid++,phase:"Semifinal",label:"Semifinal 2",home:"Gan. Ctos. 3",away:"Gan. Ctos. 4",date:"Mié 15 Jul",timeECU:"",venue:"Mercedes-Benz Stadium",city:"Atlanta"},
+  // ── 3er LUGAR ──
+  {id:_mid++,phase:"Tercer Lugar",label:"3er Lugar 🥉",home:"Perd. SF1",away:"Perd. SF2",date:"Sáb 18 Jul",timeECU:"14:00",venue:"Hard Rock Stadium",city:"Miami"},
+  // ── FINAL ──
+  {id:_mid++,phase:"Final",label:"🏆 GRAN FINAL",home:"Gan. SF1",away:"Gan. SF2",date:"Dom 19 Jul",timeECU:"14:00",venue:"MetLife Stadium",city:"Nueva Jersey"},
+];
+
+const PHASES=["Grupos","16avos","Octavos","Cuartos","Semifinal","Tercer Lugar","Final"];
+const BONUS={Grupos:1,"16avos":1.5,Octavos:2,Cuartos:2.5,Semifinal:3,"Tercer Lugar":2.5,Final:3};
 
 // ═══════════════════════════════════════
 // STORAGE & HELPERS
 // ═══════════════════════════════════════
-const KEY="polla_2026_v6";
+const KEY="polla_2026_v7";
 const loadDb=()=>{try{const d=localStorage.getItem(KEY);return d?JSON.parse(d):{users:{},leagues:{},preds:{}};}catch{return{users:{},leagues:{},preds:{}};}};
 const saveDb=d=>{try{localStorage.setItem(KEY,JSON.stringify(d));}catch{}};
 const genId=()=>Math.random().toString(36).slice(2,10);
@@ -148,7 +296,7 @@ function calcPoints(pred,results){
   if(pred.champion&&pred.champion===results.champion)pts+=15;
   if(pred.runner&&pred.runner===results.runner)pts+=8;
   if(pred.third&&pred.third===results.third)pts+=5;
-  ALL_MATCHES.forEach(m=>{
+  FIXTURE.forEach(m=>{
     const p=(pred.matches||{})[m.id],r=(results.matches||{})[m.id];
     if(!p||!r||r.home===""||r.away==="")return;
     const ph=+p.home,pa=+p.away,rh=+r.home,ra=+r.away;
@@ -161,55 +309,6 @@ function calcPoints(pred,results){
   return pts;
 }
 
-// Trophy SVG (hand-drawn in WC26 style)
-const TROPHY_SVG=`<svg class="trophy-glow" viewBox="0 0 80 100" width="80" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f0cc6e"/><stop offset="50%" stop-color="#c9a84c"/><stop offset="100%" stop-color="#9a7a2c"/></linearGradient></defs>
-  <!-- Base -->
-  <rect x="24" y="88" width="32" height="6" rx="3" fill="url(#tg)"/>
-  <rect x="28" y="82" width="24" height="7" rx="2" fill="url(#tg)"/>
-  <!-- Stem -->
-  <rect x="34" y="68" width="12" height="15" rx="2" fill="url(#tg)"/>
-  <!-- Cup body -->
-  <path d="M18 20 Q16 50 28 62 Q34 66 40 66 Q46 66 52 62 Q64 50 62 20 Z" fill="url(#tg)"/>
-  <!-- Cup shine -->
-  <path d="M26 28 Q24 45 32 56" stroke="rgba(255,255,255,0.25)" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Handles -->
-  <path d="M18 24 Q8 24 8 34 Q8 44 18 44" stroke="url(#tg)" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M62 24 Q72 24 72 34 Q72 44 62 44" stroke="url(#tg)" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <!-- Top ring -->
-  <circle cx="40" cy="20" r="8" fill="url(#tg)"/>
-  <circle cx="40" cy="20" r="4" fill="rgba(255,255,255,0.15)"/>
-</svg>`;
-
-// Mascot illustrations (SVG emoji-style)
-const MASCOTS_HTML=`
-<div class="mascot-strip">
-  <div class="mascot">
-    <span class="mascot-emoji">🫎</span>
-    <span style="color:#e84040">MAPLE</span><br/>
-    <span style="font-size:10px;opacity:.6">Canadá · #1</span>
-  </div>
-  <div class="mascot" style="transform:scale(1.15)">
-    <span class="mascot-emoji">🐆</span>
-    <span style="color:#40c06a">ZAYU</span><br/>
-    <span style="font-size:10px;opacity:.6">México · #9</span>
-  </div>
-  <div class="mascot">
-    <span class="mascot-emoji">🦅</span>
-    <span style="color:#6090e0">CLUTCH</span><br/>
-    <span style="font-size:10px;opacity:.6">USA · #10</span>
-  </div>
-</div>`;
-
-// Host bar
-const HOST_BAR=`<div style="display:flex;justify-content:center;gap:16px;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:2px;">
-  <span style="color:#e84040">🇺🇸 USA</span>
-  <span style="color:var(--muted)">·</span>
-  <span style="color:#40c06a">🇲🇽 MÉXICO</span>
-  <span style="color:var(--muted)">·</span>
-  <span style="color:#e84040">🇨🇦 CANADÁ</span>
-</div>`;
-
 // ═══════════════════════════════════════
 // APP
 // ═══════════════════════════════════════
@@ -218,26 +317,39 @@ const App=(function(){
   let editPred=null,editRes=null;
 
   const persist=nd=>{db=nd;saveDb(nd);};
-  const toast=(msg,err=false)=>{const el=document.getElementById("toast");el.textContent=msg;el.style.background=err?"#7a1a22":"#1a4a26";el.classList.remove("hidden");if(toastTimer)clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add("hidden"),3000);};
+  const toast=(msg,err=false)=>{
+    const el=document.getElementById("toast");
+    el.textContent=msg;
+    el.style.background=err?"var(--red)":"var(--green)";
+    el.classList.remove("hidden");
+    if(toastTimer)clearTimeout(toastTimer);
+    toastTimer=setTimeout(()=>el.classList.add("hidden"),3000);
+  };
   const render=html=>{document.getElementById("app").innerHTML=`<div class="screen">${html}</div>`;updateHeader();};
-  
+
   function updateHeader(){
     const h=document.getElementById("header"),u=document.getElementById("header-user");
     if(currentUser){
       h.classList.remove("hidden");
       const pts=currentLeague?calcPoints((db.preds[currentLeague.id]||{})[currentUser.id],currentLeague.results||{}):0;
-      u.innerHTML=currentUser.name+(pts>0?` <strong style="color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-size:15px;letter-spacing:1px"> ${pts}pts</strong>`:"");
-    } else h.classList.add("hidden");
+      u.innerHTML=currentUser.name+(pts>0?` <strong style="color:var(--blue);font-family:'Barlow Condensed',sans-serif;font-size:15px"> ${pts}pts</strong>`:"");
+    }else h.classList.add("hidden");
   }
 
   const teamOpts=(sel="")=>`<option value="">— Elige un equipo —</option>`+ALL_TEAMS.map(t=>`<option value="${t}" ${t===sel?"selected":""}>${fl(t)} ${t}</option>`).join("");
 
   function phaseTabs(cur){
     const done={};
-    PHASES.forEach(p=>{done[p]=ALL_MATCHES.filter(m=>m.phase===p&&currentLeague&&((currentLeague.results?.matches||{})[m.id]?.home!=="")&&((currentLeague.results?.matches||{})[m.id]?.home!==undefined)).length;});
+    PHASES.forEach(p=>{
+      done[p]=FIXTURE.filter(m=>m.phase===p).filter(m=>{
+        if(!currentLeague)return false;
+        const r=(currentLeague.results?.matches||{})[m.id];
+        return r&&r.home!=="";
+      }).length;
+    });
     return `<div class="phase-tabs">`+PHASES.map(p=>{
-      const tot=ALL_MATCHES.filter(m=>m.phase===p).length,d=done[p]||0;
-      return `<button class="tab ${p===cur?"active":"inactive"}" onclick="App.setPhase('${p}')">${p}${d>0?` <span style="font-size:10px;opacity:.6">(${d}/${tot})</span>`:""}</button>`;
+      const tot=FIXTURE.filter(m=>m.phase===p).length,d=done[p]||0;
+      return `<button class="tab ${p===cur?"active":"inactive"}" onclick="App.setPhase('${p}')">${p}${d>0?` <span style="font-size:10px;opacity:.8">(${d}/${tot})</span>`:""}</button>`;
     }).join("")+`</div>`;
   }
 
@@ -250,52 +362,98 @@ const App=(function(){
       const myP=(predMatches||{})[m.id];
       if(myP&&myP.home!==""){
         const ph=+myP.home,pa=+myP.away,rh=+rr.home,ra=+rr.away;
-        if(![ph,pa,rh,ra].some(isNaN)){const b=BONUS[m.phase]||1;const pR=ph>pa?"H":ph<pa?"A":"D",rR=rh>ra?"H":rh<ra?"A":"D";if(pR===rR)pts+=Math.round(2*b);if(ph===rh&&pa===ra)pts+=Math.round(3*b);}
+        if(![ph,pa,rh,ra].some(isNaN)){
+          const b=BONUS[m.phase]||1;
+          const pR=ph>pa?"H":ph<pa?"A":"D",rR=rh>ra?"H":rh<ra?"A":"D";
+          if(pR===rR)pts+=Math.round(2*b);
+          if(ph===rh&&pa===ra)pts+=Math.round(3*b);
+        }
       }
       cls=pts>0?"win":hasReal?"lose":"";
     }
-    const grp=m.group?`<span style="font-size:10px;color:#3a3020;min-width:14px;text-align:center;font-family:'Barlow Condensed',sans-serif">${m.group}</span>`:"";
-    const homeSpan=`<span style="flex:1;text-align:right;font-family:'Barlow',sans-serif;font-size:13px;color:#c0b070">${fl(m.home)} ${m.home}</span>`;
-    const awaySpan=`<span style="flex:1;font-family:'Barlow',sans-serif;font-size:13px;color:#c0b070">${fl(m.away)} ${m.away}</span>`;
+    const isEcu = m.home==="Ecuador"||m.away==="Ecuador";
+    const grp=m.group?`<span style="font-size:9px;font-weight:700;color:var(--blue);min-width:14px;text-align:center;font-family:'Barlow Condensed',sans-serif;background:rgba(0,61,165,.1);border-radius:4px;padding:1px 4px">${m.group}</span>`:"";
+    const homeSpan=`<span style="flex:1;text-align:right;font-family:'Barlow',sans-serif;font-size:13px;color:var(--text);font-weight:500">${fl(m.home)} ${m.home}</span>`;
+    const awaySpan=`<span style="flex:1;font-family:'Barlow',sans-serif;font-size:13px;color:var(--text);font-weight:500">${fl(m.away)} ${m.away}</span>`;
+    // Date/time badge
+    const timeBadge=m.date?`<div style="display:flex;gap:4px;align-items:center;margin-top:3px;justify-content:center">
+      <span class="date-badge">${m.date}</span>
+      ${m.timeECU?`<span class="date-badge ${isEcu?"ecu-badge":""}">🇪🇨 ${m.timeECU}</span>`:""}
+      <span class="date-badge" style="max-width:100px;overflow:hidden;text-overflow:ellipsis">${m.city||""}</span>
+    </div>`:"";
     let mid="";
     if(mode==="view"){
       const sc=hasReal?`${rr.home} — ${rr.away}`:"· — ·";
       const myPStr=(hasReal&&predMatches&&(predMatches||{})[m.id]?.home!=="")
-        ?`<div style="font-size:11px;color:#4a3a10;text-align:center;font-family:'Barlow',sans-serif">Tu: ${(predMatches||{})[m.id].home}–${(predMatches||{})[m.id].away}${pts>0?` <span style="color:#40c06a;font-weight:600">+${pts}</span>`:""}</div>`:"";
-      mid=`<div style="min-width:82px;text-align:center"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;color:var(--gold);letter-spacing:2px">${sc}</span>${myPStr}</div>`;
-    } else {
-      mid=`<div style="display:flex;align-items:center;gap:5px;min-width:72px;justify-content:center">
-        <input type="number" min="0" max="30" class="score-inp" value="${mp.home}" placeholder="·" oninput="App.updateScore(${m.id},'home',this.value)"/>
-        <span style="color:#2a2010">—</span>
-        <input type="number" min="0" max="30" class="score-inp" value="${mp.away}" placeholder="·" oninput="App.updateScore(${m.id},'away',this.value)"/>
+        ?`<div style="font-size:11px;color:var(--muted);text-align:center;font-family:'Barlow',sans-serif">Tu: ${(predMatches||{})[m.id].home}–${(predMatches||{})[m.id].away}${pts>0?` <span style="color:var(--green);font-weight:700">+${pts}</span>`:""}</div>`:"";
+      mid=`<div style="min-width:90px;text-align:center">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:${hasReal?"var(--blue)":"var(--muted)"};letter-spacing:2px">${sc}</div>
+        ${myPStr}
+        ${timeBadge}
+      </div>`;
+    }else{
+      mid=`<div style="text-align:center;min-width:90px">
+        <div style="display:flex;align-items:center;gap:5px;justify-content:center">
+          <input type="number" min="0" max="30" class="score-inp" value="${mp.home}" placeholder="·" oninput="App.updateScore(${m.id},'home',this.value)"/>
+          <span style="color:var(--border);font-size:16px;font-weight:700">—</span>
+          <input type="number" min="0" max="30" class="score-inp" value="${mp.away}" placeholder="·" oninput="App.updateScore(${m.id},'away',this.value)"/>
+        </div>
+        ${timeBadge}
       </div>`;
     }
-    return `<div class="match-row ${cls}">${grp}${homeSpan}${mid}${awaySpan}</div>`;
+    return `<div class="match-row ${cls}" style="${isEcu&&mode!=="view"?"border-color:rgba(200,16,46,.3);background:rgba(200,16,46,.04);":""}">
+      ${grp}${homeSpan}${mid}${awaySpan}
+    </div>`;
   }
+
+  // ── TROPHY SVG ──
+  const TROPHY=`<svg viewBox="0 0 80 100" width="70" height="88" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C8102E"/><stop offset="50%" stop-color="#003DA5"/><stop offset="100%" stop-color="#007A33"/></linearGradient></defs>
+    <rect x="24" y="88" width="32" height="6" rx="3" fill="url(#tg)"/>
+    <rect x="28" y="82" width="24" height="7" rx="2" fill="url(#tg)"/>
+    <rect x="34" y="68" width="12" height="15" rx="2" fill="url(#tg)"/>
+    <path d="M18 20 Q16 50 28 62 Q34 66 40 66 Q46 66 52 62 Q64 50 62 20 Z" fill="url(#tg)"/>
+    <path d="M26 28 Q24 45 32 56" stroke="rgba(255,255,255,0.3)" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M18 24 Q8 24 8 34 Q8 44 18 44" stroke="url(#tg)" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M62 24 Q72 24 72 34 Q72 44 62 44" stroke="url(#tg)" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <circle cx="40" cy="20" r="8" fill="url(#tg)"/>
+    <circle cx="40" cy="20" r="4" fill="rgba(255,255,255,0.2)"/>
+  </svg>`;
+
+  const HOST_BAR=`<div style="display:flex;justify-content:center;gap:16px;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:2px;">
+    <span style="color:var(--red)">🇺🇸 USA</span><span style="color:var(--border)">·</span>
+    <span style="color:var(--green)">🇲🇽 MÉXICO</span><span style="color:var(--border)">·</span>
+    <span style="color:var(--red)">🇨🇦 CANADÁ</span>
+  </div>`;
+
+  const MASCOTS=`<div style="display:flex;justify-content:center;gap:24px;padding:14px 0;font-size:12px;color:var(--muted);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px;">
+    <div style="text-align:center"><span style="font-size:34px;display:block;margin-bottom:3px">🫎</span><span style="color:var(--red)">MAPLE</span><br/><span style="font-size:10px;opacity:.6">Canadá</span></div>
+    <div style="text-align:center;transform:scale(1.12)"><span style="font-size:34px;display:block;margin-bottom:3px">🐆</span><span style="color:var(--green)">ZAYU</span><br/><span style="font-size:10px;opacity:.6">México</span></div>
+    <div style="text-align:center"><span style="font-size:34px;display:block;margin-bottom:3px">🦅</span><span style="color:var(--blue)">CLUTCH</span><br/><span style="font-size:10px;opacity:.6">USA</span></div>
+  </div>`;
 
   // ── SCREENS ──
 
   function showLogin(invCode=""){
     currentLeague=null;
-    const banner=invCode?`<div style="margin-top:14px;padding:10px 18px;background:rgba(201,168,76,.08);border-radius:10px;font-size:14px;color:var(--gold);border:1px solid rgba(201,168,76,.2)">🔗 Código <strong>${invCode}</strong> detectado — inicia sesión para unirte</div>`:"";
+    const banner=invCode?`<div style="margin-top:14px;padding:10px 18px;background:rgba(0,61,165,.07);border-radius:10px;font-size:14px;color:var(--blue);border:1px solid rgba(0,61,165,.2)">🔗 Código <strong>${invCode}</strong> — inicia sesión para unirte</div>`:"";
     render(`
-      <!-- HERO -->
       <div style="text-align:center;padding:40px 0 20px">
-        <div style="display:flex;justify-content:center;margin-bottom:16px">${TROPHY_SVG}</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:6px;color:var(--muted);margin-bottom:4px">FIFA</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:56px;letter-spacing:4px;line-height:1">
-          <span style="color:var(--gold)">WE ARE</span> <span style="color:var(--text)">26</span>
+        <div style="display:flex;justify-content:center;margin-bottom:14px">${TROPHY}</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:5px;color:var(--muted);margin-bottom:2px">FIFA</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:54px;letter-spacing:3px;line-height:1">
+          <span style="color:var(--red)">WE ARE</span> <span style="color:var(--blue)">26</span>
         </div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:3px;color:var(--muted);margin-top:4px">POLLA MUNDIALISTA</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:3px;color:var(--muted);margin-top:4px">POLLA MUNDIALISTA</div>
         ${HOST_BAR}
-        ${MASCOTS_HTML}
+        ${MASCOTS}
         ${banner}
       </div>
-      <div class="divider"></div>
+      <div class="tribar" style="margin-bottom:20px"></div>
       <div class="card" style="padding:26px 22px">
         <div style="margin-bottom:16px"><label class="lbl">Nombre de usuario</label><input class="inp" id="l-name" placeholder="Tu apodo..." onkeydown="if(event.key==='Enter')App.login()"/></div>
         <div style="margin-bottom:22px"><label class="lbl">Contraseña</label><input class="inp" id="l-pass" type="password" placeholder="••••••" onkeydown="if(event.key==='Enter')App.login()"/></div>
-        <button class="btn btn-gold" style="font-size:20px;margin-bottom:14px" onclick="App.login()">ENTRAR AL TORNEO</button>
+        <button class="btn btn-red" style="font-size:20px;margin-bottom:14px" onclick="App.login()">ENTRAR AL TORNEO ⚽</button>
         <div style="text-align:center"><button class="btn btn-ghost" onclick="App.showRegister()">¿Primera vez? → Regístrate</button></div>
       </div>
     `);
@@ -303,17 +461,18 @@ const App=(function(){
 
   function showRegister(){
     render(`
-      <div style="text-align:center;padding:36px 0 24px">
+      <div style="text-align:center;padding:36px 0 22px">
         <div style="font-size:52px;margin-bottom:8px">🆕</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--gold);letter-spacing:3px">REGISTRO</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--red);letter-spacing:3px">REGISTRO</div>
         <p style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:15px;margin-top:6px">Tu cuenta sirve para todas las ligas</p>
         ${HOST_BAR}
       </div>
+      <div class="tribar" style="margin-bottom:20px"></div>
       <div class="card" style="padding:24px 20px">
         <div style="margin-bottom:14px"><label class="lbl">Tu nombre</label><input class="inp" id="r-name" placeholder="Cómo te llaman..." onkeydown="if(event.key==='Enter')App.register()"/></div>
         <div style="margin-bottom:14px"><label class="lbl">Contraseña</label><input class="inp" id="r-pass" type="password" placeholder="Mínimo 4 caracteres" onkeydown="if(event.key==='Enter')App.register()"/></div>
         <div style="margin-bottom:20px"><label class="lbl">Repetir contraseña</label><input class="inp" id="r-pass2" type="password" placeholder="Igual que arriba..." onkeydown="if(event.key==='Enter')App.register()"/></div>
-        <button class="btn btn-gold" style="margin-bottom:12px" onclick="App.register()">CREAR CUENTA ⚽</button>
+        <button class="btn btn-red" style="margin-bottom:12px" onclick="App.register()">CREAR CUENTA ⚽</button>
         <div style="text-align:center"><button class="btn btn-ghost" onclick="App.showLogin()">← Ya tengo cuenta</button></div>
       </div>
     `);
@@ -323,39 +482,39 @@ const App=(function(){
     currentLeague=null; updateHeader();
     const myLeagues=Object.values(db.leagues).filter(l=>l.members.includes(currentUser.id));
     const cards=myLeagues.length===0
-      ?`<div class="card" style="padding:32px;text-align:center;margin-bottom:16px"><div style="font-size:48px;margin-bottom:10px">🏟️</div><div style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:16px">No estás en ninguna liga.<br/>¡Crea una o únete con un código!</div></div>`
+      ?`<div class="card" style="padding:32px;text-align:center;margin-bottom:16px"><div style="font-size:48px;margin-bottom:10px">🏟️</div><div style="color:var(--muted);font-size:16px">No estás en ninguna liga.<br/>¡Crea una o únete con un código!</div></div>`
       :myLeagues.map(l=>{
         const lp=db.preds[l.id]||{},myPts=calcPoints(lp[currentUser.id],l.results||{});
         const lb=l.members.map(uid=>db.users[uid]).filter(Boolean).sort((a,b)=>calcPoints(lp[b.id],l.results||{})-calcPoints(lp[a.id],l.results||{}));
         const rank=lb.findIndex(u=>u.id===currentUser.id)+1;
         const res=Object.values(l.results?.matches||{}).filter(r=>r&&r.home!=="").length;
         const isAdm=l.adminId===currentUser.id;
-        return `<div class="league-card" style="border-left-color:${isAdm?"var(--gold)":"rgba(201,168,76,.3)"}" onclick="App.openLeague('${l.id}')">
+        return `<div class="league-card" style="border-left:4px solid ${isAdm?"var(--red)":"var(--blue)"}" onclick="App.openLeague('${l.id}')">
           <div style="display:flex;justify-content:space-between;align-items:flex-start">
             <div>
               <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;letter-spacing:1px;color:var(--text)">${isAdm?"👑 ":""}${l.name}</div>
-              <div style="font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);margin-top:3px">${l.members.length} jugador${l.members.length!==1?"es":""} · ${res} resultados · <span style="color:var(--gold);font-family:'Barlow Condensed',sans-serif;letter-spacing:1px">${l.code}</span></div>
+              <div style="font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);margin-top:3px">${l.members.length} jugador${l.members.length!==1?"es":""} · ${res} resultados · <span style="color:var(--blue);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:1px">${l.code}</span></div>
             </div>
             <div style="text-align:right;flex-shrink:0;margin-left:12px">
-              <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--gold);line-height:1">${myPts}</div>
+              <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--red);line-height:1">${myPts}</div>
               <div style="font-size:9px;color:var(--muted);letter-spacing:1.5px">PTS</div>
-              ${rank>0?`<div style="font-family:'Barlow',sans-serif;font-size:12px;color:var(--muted)">#${rank} / ${l.members.length}</div>`:""}
+              ${rank>0?`<div style="font-size:12px;color:var(--muted)">#${rank} / ${l.members.length}</div>`:""}
             </div>
           </div>
         </div>`;
       }).join("");
     render(`
-      <div style="text-align:center;padding:20px 0 18px">
+      <div style="text-align:center;padding:22px 0 18px">
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:4px;color:var(--muted);margin-bottom:2px">BIENVENIDO, ${currentUser.name.toUpperCase()}</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:var(--gold);letter-spacing:3px;line-height:1">MIS LIGAS</div>
-        <div style="font-family:'Barlow',sans-serif;color:var(--muted);margin-top:5px;font-size:15px">Cada liga es una competencia independiente ⚽</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:var(--blue);letter-spacing:3px;line-height:1">MIS LIGAS</div>
+        <div style="color:var(--muted);margin-top:5px;font-size:15px">Cada liga es una competencia independiente ⚽</div>
       </div>
-      ${MASCOTS_HTML}
-      <div class="divider"></div>
+      ${MASCOTS}
+      <div class="tribar" style="margin-bottom:16px"></div>
       ${cards}
       <div class="grid2" style="margin-top:10px">
-        <button class="btn btn-gold" style="font-size:16px;padding:14px" onclick="App.showCreateLeague()">➕ CREAR LIGA</button>
-        <button class="btn btn-outline" style="font-size:16px;padding:14px" onclick="App.showJoinLeague()">🔗 UNIRME</button>
+        <button class="btn btn-red" style="font-size:16px;padding:14px" onclick="App.showCreateLeague()">➕ CREAR LIGA</button>
+        <button class="btn btn-blue" style="font-size:16px;padding:14px" onclick="App.showJoinLeague()">🔗 UNIRME</button>
       </div>
     `);
   }
@@ -364,17 +523,17 @@ const App=(function(){
     render(`
       <button class="btn btn-ghost" style="margin-bottom:16px" onclick="App.showLeagues()">← Volver</button>
       <div style="text-align:center;padding:20px 0 22px">
-        <div style="font-size:56px;margin-bottom:8px">🏆</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--gold);letter-spacing:3px">NUEVA LIGA</div>
-        <p style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:15px;margin-top:6px">Se genera un link único para invitar</p>
+        <div style="font-size:52px;margin-bottom:8px">🏆</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--red);letter-spacing:3px">NUEVA LIGA</div>
+        <p style="color:var(--muted);font-size:15px;margin-top:6px">Se genera un link único para invitar</p>
       </div>
       <div class="card" style="padding:24px 20px">
         <label class="lbl">Nombre de la liga</label>
-        <input class="inp" id="new-name" style="margin-bottom:18px;font-size:20px" placeholder="Familia García, Oficina, Los Panas..." onkeydown="if(event.key==='Enter')App.createLeague()"/>
-        <div style="font-family:'Barlow',sans-serif;font-size:14px;color:var(--muted);margin-bottom:20px;padding:12px 14px;background:rgba(201,168,76,.06);border-radius:10px;border:1px solid rgba(201,168,76,.15)">
-          💡 Serás el <strong style="color:var(--gold)">administrador 👑</strong> — solo tú ingresas los resultados reales del torneo.
+        <input class="inp" id="new-name" style="margin-bottom:18px;font-size:20px" placeholder="Familia, Oficina, Los Panas..." onkeydown="if(event.key==='Enter')App.createLeague()"/>
+        <div style="font-size:14px;color:var(--muted);margin-bottom:20px;padding:12px 14px;background:rgba(0,61,165,.05);border-radius:10px;border:1px solid rgba(0,61,165,.15)">
+          💡 Serás el <strong style="color:var(--blue)">administrador 👑</strong> — solo tú ingresas los resultados reales.
         </div>
-        <button class="btn btn-gold" style="font-size:20px" onclick="App.createLeague()">CREAR LIGA 🚀</button>
+        <button class="btn btn-red" style="font-size:20px" onclick="App.createLeague()">CREAR LIGA 🚀</button>
       </div>
     `);
   }
@@ -383,14 +542,14 @@ const App=(function(){
     render(`
       <button class="btn btn-ghost" style="margin-bottom:16px" onclick="App.showLeagues()">← Volver</button>
       <div style="text-align:center;padding:20px 0 22px">
-        <div style="font-size:56px;margin-bottom:8px">🔗</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--gold);letter-spacing:3px">UNIRME</div>
-        <p style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:15px;margin-top:6px">Ingresa el código que te mandaron</p>
+        <div style="font-size:52px;margin-bottom:8px">🔗</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--blue);letter-spacing:3px">UNIRME</div>
+        <p style="color:var(--muted);font-size:15px;margin-top:6px">Ingresa el código que te mandaron</p>
       </div>
       <div class="card" style="padding:24px 20px">
         <label class="lbl">Código de invitación</label>
         <input class="inp" id="join-code" style="margin-bottom:20px;font-size:22px;letter-spacing:3px;text-transform:uppercase" placeholder="Ej: FAMILIA926" value="${pre}" onkeydown="if(event.key==='Enter')App.joinByCode()"/>
-        <button class="btn btn-gold" style="font-size:20px" onclick="App.joinByCode()">UNIRME ⚽</button>
+        <button class="btn btn-blue" style="font-size:20px" onclick="App.joinByCode()">UNIRME ⚽</button>
       </div>
     `);
   }
@@ -405,9 +564,9 @@ const App=(function(){
     const isAdm=l.adminId===currentUser.id;
     const link=`${location.origin}${location.pathname}#${l.code}`;
     const podioBox=myP?`
-      <div class="card-gold" style="padding:12px 16px;margin-bottom:12px">
-        <div style="font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-bottom:7px;font-family:'Barlow Condensed',sans-serif;font-weight:600">TU PODIO APOSTADO</div>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;font-family:'Barlow',sans-serif;font-size:14px;color:#b0a060">
+      <div class="card-blue" style="padding:12px 16px;margin-bottom:12px">
+        <div style="font-size:10px;letter-spacing:2px;color:var(--muted);margin-bottom:7px;font-family:'Barlow Condensed',sans-serif;font-weight:700">TU PODIO APOSTADO</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--text)">
           <span>🥇 ${fl(myP.champion)} ${myP.champion||"—"}</span>
           <span>🥈 ${fl(myP.runner)} ${myP.runner||"—"}</span>
           <span>🥉 ${fl(myP.third)} ${myP.third||"—"}</span>
@@ -416,44 +575,43 @@ const App=(function(){
     render(`
       <div style="text-align:center;padding:16px 0 18px">
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:4px;color:var(--muted);margin-bottom:2px">LIGA</div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:40px;color:var(--gold);letter-spacing:2px;line-height:1">${l.name.toUpperCase()}</div>
-        <div style="font-family:'Barlow',sans-serif;color:var(--muted);margin-top:5px">${l.members.length} jugador${l.members.length!==1?"es":""} · ${res} resultados ingresados</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:40px;color:var(--red);letter-spacing:2px;line-height:1">${l.name.toUpperCase()}</div>
+        <div style="color:var(--muted);margin-top:5px">${l.members.length} jugador${l.members.length!==1?"es":""} · ${res} resultados</div>
         ${HOST_BAR}
       </div>
+      <div class="tribar" style="margin-bottom:14px"></div>
       <div class="grid3" style="margin-bottom:14px">
-        <div class="card stat-box"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--gold);line-height:1">${myPts}</div><div style="font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:3px;font-family:'Barlow Condensed',sans-serif">TUS PUNTOS</div></div>
-        <div class="card stat-box"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:#c0a030;line-height:1">${myRank?"#"+myRank:"—"}</div><div style="font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:3px;font-family:'Barlow Condensed',sans-serif">POSICIÓN</div></div>
-        <div class="card stat-box"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:#40c06a;line-height:1">${res}</div><div style="font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:3px;font-family:'Barlow Condensed',sans-serif">RESULTADOS</div></div>
+        <div class="card stat-box"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--red);line-height:1">${myPts}</div><div style="font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:3px;font-family:'Barlow Condensed',sans-serif">TUS PUNTOS</div></div>
+        <div class="card stat-box"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--blue);line-height:1">${myRank?"#"+myRank:"—"}</div><div style="font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:3px;font-family:'Barlow Condensed',sans-serif">POSICIÓN</div></div>
+        <div class="card stat-box"><div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--green);line-height:1">${res}</div><div style="font-size:9px;letter-spacing:2px;color:var(--muted);margin-top:3px;font-family:'Barlow Condensed',sans-serif">RESULTADOS</div></div>
       </div>
       ${podioBox}
       <div class="grid2" style="margin-bottom:10px">
-        <button class="card" style="padding:18px 14px;cursor:pointer;border:none;text-align:center;transition:all .18s" onmouseover="this.style.background='rgba(201,168,76,.08)'" onmouseout="this.style.background=''" onclick="App.showPredict()">
+        <button class="card" style="padding:18px 14px;cursor:pointer;border:none;text-align:center;transition:all .18s" onmouseover="this.style.boxShadow='0 4px 16px rgba(200,16,46,.12)'" onmouseout="this.style.boxShadow=''" onclick="App.showPredict()">
           <div style="font-size:32px;margin-bottom:6px">🎯</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;color:var(--gold)">PREDICCIONES</div>
-          <div style="font-family:'Barlow',sans-serif;font-size:12px;color:var(--muted);margin-top:2px">Editar mis apuestas</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;color:var(--red)">PREDICCIONES</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Editar mis apuestas</div>
         </button>
-        <button class="card" style="padding:18px 14px;cursor:pointer;border:none;text-align:center;transition:all .18s" onmouseover="this.style.background='rgba(201,168,76,.08)'" onmouseout="this.style.background=''" onclick="App.showLeaderboard()">
+        <button class="card" style="padding:18px 14px;cursor:pointer;border:none;text-align:center;transition:all .18s" onmouseover="this.style.boxShadow='0 4px 16px rgba(0,61,165,.12)'" onmouseout="this.style.boxShadow=''" onclick="App.showLeaderboard()">
           <div style="font-size:32px;margin-bottom:6px">🏅</div>
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;color:var(--gold)">CLASIFICACIÓN</div>
-          <div style="font-family:'Barlow',sans-serif;font-size:12px;color:var(--muted);margin-top:2px">${l.members.length} jugadores</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:2px;color:var(--blue)">CLASIFICACIÓN</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">${l.members.length} jugadores</div>
         </button>
       </div>
-      <button class="btn btn-blue" style="margin-bottom:8px;padding:13px;font-size:15px;letter-spacing:2px" onclick="App.showMatchView()">📋 VER TODOS LOS PARTIDOS</button>
-      ${isAdm?`<button class="btn btn-red" style="margin-bottom:8px" onclick="App.showResults()">👑 INGRESAR RESULTADOS (ADMIN)</button>`:""}
+      <button class="btn btn-green" style="margin-bottom:8px;padding:13px;font-size:15px;letter-spacing:2px" onclick="App.showMatchView()">📋 VER PARTIDOS Y HORARIOS 🇪🇨</button>
+      ${isAdm?`<button class="btn btn-blue" style="margin-bottom:8px;padding:13px;font-size:15px;letter-spacing:2px" onclick="App.showResults()">👑 INGRESAR RESULTADOS</button>`:""}
       <div class="divider"></div>
-      <!-- INVITE BOX -->
-      <div class="card-gold" style="padding:16px 18px">
-        <div style="font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;font-weight:600">🔗 LINK DE INVITACIÓN</div>
+      <div class="card-blue" style="padding:16px 18px">
+        <div style="font-size:10px;letter-spacing:2px;color:var(--muted);margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700">🔗 LINK DE INVITACIÓN</div>
         <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-          <div style="flex:1;font-family:'Barlow',sans-serif;font-size:13px;color:#8a7a40;background:rgba(0,0,0,.3);border-radius:8px;padding:8px 12px;border:1px solid rgba(201,168,76,.15);word-break:break-all;min-width:0">${link}</div>
-          <button class="btn btn-gold" style="padding:10px 16px;font-size:14px;width:auto;flex-shrink:0" onclick="navigator.clipboard.writeText('${link}').then(()=>App.toast('¡Link copiado! 📋'))">COPIAR</button>
+          <div style="flex:1;font-size:13px;color:var(--muted);background:var(--offwhite);border-radius:8px;padding:8px 12px;border:1px solid var(--border);word-break:break-all;min-width:0">${link}</div>
+          <button class="btn btn-blue" style="padding:10px 16px;font-size:14px;width:auto;flex-shrink:0" onclick="navigator.clipboard.writeText('${link}').then(()=>App.toast('¡Link copiado! 📋'))">COPIAR</button>
         </div>
-        <div style="font-family:'Barlow',sans-serif;font-size:12px;color:var(--muted);margin-top:8px">Código: <span style="color:var(--gold);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:2px;font-size:16px">${l.code}</span></div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">Código: <span style="color:var(--blue);font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:2px;font-size:16px">${l.code}</span></div>
       </div>
-      <!-- SCORING INFO -->
       <div class="card" style="padding:14px 16px;margin-top:10px">
-        <div style="font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;font-weight:600">SISTEMA DE PUNTOS</div>
-        ${[["🥇 Campeón","15 pts"],["🥈 Subcampeón","8 pts"],["🥉 3er lugar","5 pts"],["✅ Ganador partido","×2 pts"],["🎯 Resultado exacto","×3 pts"],["⚡ Multiplicador (Oct→Final)","×1.5 → ×2 → ×2.5 → ×3"]].map(([l,v])=>`<div style="display:flex;justify-content:space-between;font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);padding:4px 0;border-bottom:1px solid rgba(201,168,76,.06)"><span>${l}</span><span style="color:var(--gold)">${v}</span></div>`).join("")}
+        <div style="font-size:10px;letter-spacing:2px;color:var(--muted);margin-bottom:8px;font-family:'Barlow Condensed',sans-serif;font-weight:700">SISTEMA DE PUNTOS</div>
+        ${[["🥇 Campeón","15 pts","var(--red)"],["🥈 Subcampeón","8 pts","var(--blue)"],["🥉 3er lugar","5 pts","var(--green)"],["✅ Ganador partido (×base)","2 pts","var(--muted)"],["🎯 Resultado exacto (×base)","3 pts","var(--muted)"],["⚡ Multiplicador fases","16avos×1.5 · Oct×2 · 4tos×2.5 · Semi/Final×3","var(--muted)"]].map(([l,v,c])=>`<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border)"><span>${l}</span><span style="color:${c};font-weight:600">${v}</span></div>`).join("")}
       </div>
     `);
   }
@@ -464,22 +622,25 @@ const App=(function(){
   }
   function renderPredict(){
     const done=Object.keys(editPred.matches).filter(k=>editPred.matches[k]?.home!=="").length;
-    const rows=ALL_MATCHES.filter(m=>m.phase===activePhase).map(m=>matchRow(m,editPred.matches,"edit",null,null)).join("");
+    const rows=FIXTURE.filter(m=>m.phase===activePhase).map(m=>matchRow(m,editPred.matches,"edit",null,null)).join("");
     render(`
-      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--gold);letter-spacing:2px;margin-bottom:2px">🎯 PREDICCIONES</h2>
-      <p style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:13px;margin-bottom:18px">Liga: <span style="color:var(--gold)">${currentLeague.name}</span> · ${done}/${ALL_MATCHES.length} partidos predichos</p>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--red);letter-spacing:2px;margin-bottom:2px">🎯 PREDICCIONES</h2>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:18px">Liga: <span style="color:var(--blue);font-weight:600">${currentLeague.name}</span> · ${done}/${FIXTURE.length} partidos · <span style="color:var(--red)">🇪🇨 Horarios Ecuador</span></p>
       <div class="card" style="padding:18px;margin-bottom:14px">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;color:var(--gold);margin-bottom:14px">🏆 PODIO FINAL</div>
+        <div class="sec-title" style="color:var(--red)">🏆 PODIO FINAL</div>
         <div style="margin-bottom:12px"><label class="lbl">🥇 Campeón del Mundo (15 pts)</label><select class="inp" onchange="App.setPodio('champion',this.value)">${teamOpts(editPred.champion)}</select></div>
         <div style="margin-bottom:12px"><label class="lbl">🥈 Subcampeón (8 pts)</label><select class="inp" onchange="App.setPodio('runner',this.value)">${teamOpts(editPred.runner)}</select></div>
         <div><label class="lbl">🥉 Tercer Lugar (5 pts)</label><select class="inp" onchange="App.setPodio('third',this.value)">${teamOpts(editPred.third)}</select></div>
       </div>
       <div class="card" style="padding:18px;margin-bottom:18px">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;color:var(--gold);margin-bottom:12px">⚽ PARTIDOS</div>
+        <div class="sec-title" style="color:var(--blue)">⚽ PARTIDOS</div>
         ${phaseTabs(activePhase)}
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px;padding:6px 10px;background:rgba(200,16,46,.06);border-radius:8px;border-left:3px solid var(--red)">
+          🇪🇨 Los horarios en rojo son hora Ecuador (UTC-5)
+        </div>
         ${rows}
       </div>
-      <button class="btn btn-gold" style="font-size:20px" onclick="App.savePred()">GUARDAR PREDICCIONES 🎯</button>
+      <button class="btn btn-red" style="font-size:20px" onclick="App.savePred()">GUARDAR PREDICCIONES 🎯</button>
     `);
   }
 
@@ -489,33 +650,36 @@ const App=(function(){
   }
   function renderResults(){
     const done=Object.values(editRes.matches||{}).filter(r=>r&&r.home!=="").length;
-    const rows=ALL_MATCHES.filter(m=>m.phase===activePhase).map(m=>matchRow(m,editRes.matches,"edit",null,null)).join("");
+    const rows=FIXTURE.filter(m=>m.phase===activePhase).map(m=>matchRow(m,editRes.matches,"edit",null,null)).join("");
     render(`
-      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:#e07040;letter-spacing:2px;margin-bottom:2px">👑 RESULTADOS REALES</h2>
-      <p style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:13px;margin-bottom:18px">Liga: <span style="color:#e09060">${currentLeague.name}</span> · ${done} resultados ingresados</p>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--blue);letter-spacing:2px;margin-bottom:2px">👑 RESULTADOS REALES</h2>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:18px">Liga: <span style="color:var(--red);font-weight:600">${currentLeague.name}</span> · ${done} ingresados</p>
       <div class="card" style="padding:18px;margin-bottom:14px">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;color:#e07040;margin-bottom:14px">🏆 PODIO REAL</div>
+        <div class="sec-title" style="color:var(--blue)">🏆 PODIO REAL</div>
         <div style="margin-bottom:12px"><label class="lbl">🥇 Campeón</label><select class="inp" onchange="App.setResPodio('champion',this.value)">${teamOpts(editRes.champion)}</select></div>
         <div style="margin-bottom:12px"><label class="lbl">🥈 Subcampeón</label><select class="inp" onchange="App.setResPodio('runner',this.value)">${teamOpts(editRes.runner)}</select></div>
         <div><label class="lbl">🥉 Tercer Lugar</label><select class="inp" onchange="App.setResPodio('third',this.value)">${teamOpts(editRes.third)}</select></div>
       </div>
       <div class="card" style="padding:18px;margin-bottom:18px">
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;color:#e07040;margin-bottom:12px">⚽ PARTIDOS</div>
+        <div class="sec-title" style="color:var(--blue)">⚽ PARTIDOS</div>
         ${phaseTabs(activePhase)}
-        <div style="font-family:'Barlow',sans-serif;font-size:12px;color:var(--muted);margin-bottom:10px">${done}/${ALL_MATCHES.length} resultados ingresados en total</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">${done}/${FIXTURE.length} resultados ingresados en total</div>
         ${rows}
       </div>
-      <button class="btn btn-gold" style="font-size:20px;background:linear-gradient(135deg,#e07040,#b02000)" onclick="App.saveRes()">GUARDAR RESULTADOS ✅</button>
+      <button class="btn btn-blue" style="font-size:20px" onclick="App.saveRes()">GUARDAR RESULTADOS ✅</button>
     `);
   }
 
   function showMatchView(){
     const myPreds=(db.preds[currentLeague.id]||{})[currentUser.id];
     const res=Object.values(currentLeague.results?.matches||{}).filter(r=>r&&r.home!=="").length;
-    const rows=ALL_MATCHES.filter(m=>m.phase===activePhase).map(m=>matchRow(m,currentLeague.results?.matches||{},"view",currentLeague.results?.matches||{},myPreds?.matches||{})).join("");
+    const rows=FIXTURE.filter(m=>m.phase===activePhase).map(m=>matchRow(m,currentLeague.results?.matches||{},"view",currentLeague.results?.matches||{},myPreds?.matches||{})).join("");
     render(`
-      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:#6090e0;letter-spacing:2px;margin-bottom:2px">📋 PARTIDOS</h2>
-      <p style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:13px;margin-bottom:18px">Liga: <span style="color:#7090d0">${currentLeague.name}</span> · ${res} resultados disponibles</p>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--green);letter-spacing:2px;margin-bottom:2px">📋 PARTIDOS Y HORARIOS</h2>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:4px">Liga: <span style="color:var(--blue);font-weight:600">${currentLeague.name}</span> · ${res} resultados</p>
+      <div style="font-size:12px;padding:6px 10px;background:rgba(200,16,46,.06);border-radius:8px;border-left:3px solid var(--red);margin-bottom:16px;color:var(--red);font-weight:600">
+        🇪🇨 Todos los horarios en hora Ecuador (UTC-5) · Ecuador juega en el Grupo E
+      </div>
       ${phaseTabs(activePhase)}
       ${rows}
     `);
@@ -530,26 +694,28 @@ const App=(function(){
       const isMe=u.id===currentUser.id;
       const p=lp[u.id];
       const medal=["🥇","🥈","🥉"][i]||(i+1);
-      return `<div class="rank-row" style="background:${isMe?"rgba(201,168,76,.08)":i===0?"rgba(201,168,76,.05)":"rgba(255,255,255,.03)"};border:1px solid ${isMe?"rgba(201,168,76,.3)":i===0?"rgba(201,168,76,.18)":"rgba(255,255,255,.05)"};border-left:3px solid ${isMe?"var(--gold)":i===0?"#c0a020":"transparent"}">
+      const bg=isMe?"rgba(200,16,46,.06)":i===0?"rgba(0,61,165,.04)":"rgba(0,0,0,.02)";
+      const bdr=isMe?"2px solid rgba(200,16,46,.3)":i===0?"1px solid rgba(0,61,165,.2)":"1px solid var(--border)";
+      const bl=isMe?"4px solid var(--red)":i===0?"4px solid var(--blue)":"4px solid transparent";
+      return `<div class="rank-row" style="background:${bg};border:${bdr};border-left:${bl};box-shadow:0 1px 4px rgba(0,0,0,.05)">
         <span style="font-size:${i<3?26:17}px;min-width:28px;text-align:center">${medal}</span>
         <div style="flex:1">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:1px;color:${isMe?"var(--gold)":i===0?"#d0b050":"var(--text)"}">${currentLeague.adminId===u.id?"👑 ":""}${u.name}${isMe?" <span style='font-size:13px;color:var(--muted)'>(tú)</span>":""}</div>
-          ${p?.champion?`<div style="font-family:'Barlow',sans-serif;font-size:12px;color:var(--muted);margin-top:2px">🏆 ${fl(p.champion)} ${p.champion}${p.champion===results.champion?' <span style="color:#40c06a">✅</span>':''}</div>`:""}
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:1px;color:${isMe?"var(--red)":i===0?"var(--blue)":"var(--text)"}">${currentLeague.adminId===u.id?"👑 ":""}${u.name}${isMe?" <span style='font-size:13px;color:var(--muted)'>(tú)</span>":""}</div>
+          ${p?.champion?`<div style="font-size:12px;color:var(--muted);margin-top:2px">🏆 ${fl(p.champion)} ${p.champion}${p.champion===results.champion?' <span style="color:var(--green);font-weight:700">✅</span>':''}</div>`:""}
         </div>
         <div style="text-align:right">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:30px;color:${isMe?"var(--gold)":i===0?"#d0b050":"#b09040"};line-height:1">${u.pts}</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:30px;color:${isMe?"var(--red)":i===0?"var(--blue)":"var(--muted)"};line-height:1">${u.pts}</div>
           <div style="font-size:8px;color:var(--muted);letter-spacing:1.5px;margin-top:2px">PUNTOS</div>
         </div>
       </div>`;
     }).join("");
-    // Desglose
     const myPred=lp[currentUser.id];
     let desglose="";
     if(myPred){
       let lines="";
       PHASES.forEach(ph=>{
         let pp=0;
-        ALL_MATCHES.filter(m=>m.phase===ph).forEach(m=>{
+        FIXTURE.filter(m=>m.phase===ph).forEach(m=>{
           const p=(myPred.matches||{})[m.id],r=(results.matches||{})[m.id];
           if(!p||!r||r.home===""||r.away==="")return;
           const ph2=+p.home,pa=+p.away,rh=+r.home,ra=+r.away;
@@ -559,15 +725,15 @@ const App=(function(){
           if(pR===rR)pp+=Math.round(2*b);
           if(ph2===rh&&pa===ra)pp+=Math.round(3*b);
         });
-        if(pp>0)lines+=`<div style="display:flex;justify-content:space-between;font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);padding:4px 0;border-bottom:1px solid rgba(201,168,76,.06)"><span>${ph}</span><span style="color:var(--gold)">${pp} pts</span></div>`;
+        if(pp>0)lines+=`<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border)"><span>${ph}</span><span style="color:var(--blue);font-weight:600">${pp} pts</span></div>`;
       });
       const pod=(myPred.champion===results.champion?15:0)+(myPred.runner===results.runner?8:0)+(myPred.third===results.third?5:0);
-      if(pod>0)lines+=`<div style="display:flex;justify-content:space-between;font-family:'Barlow',sans-serif;font-size:13px;color:var(--muted);padding:4px 0;border-bottom:1px solid rgba(201,168,76,.06)"><span>Podio</span><span style="color:var(--gold)">${pod} pts</span></div>`;
-      if(lines)desglose=`<div class="card" style="padding:16px;margin-top:14px"><div style="font-size:10px;letter-spacing:2.5px;color:var(--muted);margin-bottom:10px;font-family:'Barlow Condensed',sans-serif;font-weight:600">MI DESGLOSE EN ESTA LIGA</div>${lines}<div style="display:flex;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:var(--gold);padding-top:8px;letter-spacing:1px"><span>TOTAL</span><span>${myPts} pts</span></div></div>`;
+      if(pod>0)lines+=`<div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted);padding:4px 0;border-bottom:1px solid var(--border)"><span>Podio</span><span style="color:var(--green);font-weight:600">${pod} pts</span></div>`;
+      if(lines)desglose=`<div class="card" style="padding:16px;margin-top:14px"><div style="font-size:10px;letter-spacing:2px;color:var(--muted);margin-bottom:10px;font-family:'Barlow Condensed',sans-serif;font-weight:700">MI DESGLOSE EN ESTA LIGA</div>${lines}<div style="display:flex;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;color:var(--red);padding-top:8px;letter-spacing:1px"><span>TOTAL</span><span>${myPts} pts</span></div></div>`;
     }
     render(`
-      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--gold);letter-spacing:2px;margin-bottom:2px">🏅 CLASIFICACIÓN</h2>
-      <p style="font-family:'Barlow',sans-serif;color:var(--muted);font-size:13px;margin-bottom:18px">${currentLeague.name} · ${res} resultados · puntos en tiempo real</p>
+      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--blue);letter-spacing:2px;margin-bottom:2px">🏅 CLASIFICACIÓN</h2>
+      <p style="color:var(--muted);font-size:13px;margin-bottom:18px">${currentLeague.name} · ${res} resultados · puntos en tiempo real</p>
       ${rows}
       ${desglose}
     `);
